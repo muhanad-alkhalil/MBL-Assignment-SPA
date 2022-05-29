@@ -1,0 +1,17 @@
+<div class="row p-4 no-gutters text-center">
+  <div class="col-md-12">
+    <h3 class="font-light mb-0">Hello {{ userInfo.username }}</h3>
+  </div>
+</div>
+<div class="row p-4 no-gutters text-center">
+  <div class="col-md-12">
+    <p class="font-light mb-0">
+      You have {{ userInfo.unreadMessages }} unread message out of
+      {{ userInfo.totalMessages }} Total
+    </p>
+
+    <button (click)="goToInbox()" class="btn btn-primary mt-3">
+      View Messages
+    </button>
+  </div>
+</div>

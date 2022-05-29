@@ -1,0 +1,17 @@
+nav {
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 20px -17px rgba(0,0,0,.34);
+  -moz-box-shadow: 0 5px 20px -17px rgba(0,0,0,.34);
+  box-shadow: 0 5px 20px -17px rgba(0,0,0,.34);
+}
+
+.nav-link.active{
+  color: #fc7fb2 !important;
+}
+
+.navbar-brand{
+  font-weight: 600;
+padding: 10px;
+margin-right: 30px;
+}

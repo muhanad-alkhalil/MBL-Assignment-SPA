@@ -1,0 +1,35 @@
+<div class="table-responsive">
+  <h2 class="m-2 p-3 text-info">3 Unread Message</h2>
+  <table class="table email-table no-wrap table-hover v-middle mb-0 font-14">
+    <tbody>
+      <!-- row -->
+      <tr *ngFor="let message of messages">
+        <!-- label -->
+        <td class="pl-3">{{ message.id }}</td>
+
+        <!-- topic -->
+        <td>
+          <a class="link" routerLink="../message/{{ message.id }}">
+            <span class="text-dark"> {{ message.subject }} </span>
+            <span
+              *ngIf="!message.isRead"
+              class="badge badge-pill text-white font-medium badge-danger mr-2"
+              >Unread</span
+            >
+          </a>
+        </td>
+        <!-- Message -->
+        <td>
+          <span class="text-muted">
+            {{
+              message.content.length > 30
+                ? (message.content | slice: 0:30) + "..."
+                : message.content
+            }}
+          </span>
+        </td>
+      </tr>
+      <!-- row -->
+    </tbody>
+  </table>
+</div>
